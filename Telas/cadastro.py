@@ -62,20 +62,16 @@ class TelaCadastro(QWidget):
         senha = self.input_senha.text().strip()
         repetir_senha = self.input_repetir_senha.text().strip()
 
-        # Verifica se algum campo está vazio
         if not username or not email or not cpf or not senha or not repetir_senha:
             QMessageBox.warning(self, "Erro", "Preencha todos os campos.")
             return
 
-        # Remove pontos e traço do CPF (aceita apenas números)
         cpf = re.sub(r'\D', '', cpf)
 
-        # Verifica se o CPF tem 11 dígitos
         if len(cpf) != 11:
             QMessageBox.warning(self, "Erro", "CPF inválido. Digite apenas números.")
             return
 
-        # Verifica se as senhas coincidem
         if senha != repetir_senha:
             QMessageBox.warning(self, "Erro", "As senhas não coincidem.")
             return
