@@ -1,5 +1,6 @@
 import re
 from PyQt6.QtWidgets import QWidget, QLabel, QLineEdit, QPushButton, QMessageBox
+from PyQt6.QtGui import  QIcon
 from Database.database import conectar
 
 class TelaCadastro(QWidget):
@@ -7,6 +8,7 @@ class TelaCadastro(QWidget):
         super().__init__()
         self.tela_login = tela_login
         self.initUI()
+        self.setWindowIcon(QIcon("Img/cadastro.png"))
 
     def initUI(self):
         self.setWindowTitle("Cadastro")
