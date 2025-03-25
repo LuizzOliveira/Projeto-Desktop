@@ -80,4 +80,3 @@ python main.py
 
 ## 📌 Autor
 Desenvolvido por **Luiz Henrique** 🚀
-
